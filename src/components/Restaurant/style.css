@@ -1,0 +1,34 @@
+.restaurantContainer {
+  border: 1px solid black;
+  height: auto;
+  width: 96vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapperDiv {
+  margin: 20px;
+  border: 1px solid red;
+  min-height: 300px;
+  min-width: 300px;
+  max-height: 450px;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant {
+  height: 80%;
+  width: 80%;
+  border: 1px dotted green;
+}
+.restaurantimageContainer {
+  border: 1px solid orange;
+  height: 50%;
+  width: 99%;
+}
+.detailsContainer {
+  height: 49%;
+  width: 99%;
+  border: 1px solid orange;
+}

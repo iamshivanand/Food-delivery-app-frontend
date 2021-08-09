@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+.landingPage {
+  /* border: 2px solid black; */
+  width: 98vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.imageContainer {
+  /* border: 5px solid grey; */
+  height: 90vh;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+.imageContainer img {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.header {
+  margin-top: 0%;
+  position: absolute;
+  height: 90vh;
+  width: 98%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  float: right;
+  flex-direction: column;
+}
+.navContainer {
+  /* border: 2px solid black; */
+  margin: 0%;
+  width: 98%;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+}
+.buttonContainer {
+  /* border: 2px solid greenyellow; */
+  width: 200px;
+  height: 40px;
+}
+.button {
+  height: 40px;
+  width: 100px;
+  background-color: transparent;
+  font-size: large;
+  color: beige;
+  border: none;
+  font-family: "Recursive", sans-serif;
+}
+.searchContainer {
+  margin-top: 20px;
+  /* border: 2px solid red; */
+  height: auto;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: xx-large;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+}
+.searchContainer h1 {
+  margin: 0%;
+  height: 100%;
+  /* border: 2px solid yellow; */
+}
+.tagLine {
+  color: whitesmoke;
+  font-family: "Recursive", sans-serif;
+}
+.searchBar {
+  height: auto;
+}
+.searchBar input {
+  height: 50px;
+  width: 50%;
+  min-width: 400px;
+  border: none;
+
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 30px;
+  font-weight: lighter;
+}
+input:focus {
+  outline: none;
+}
+.searchBar button {
+  margin: 0%;
+  height: 100%;
+  border: none;
+  border-left: 1px solid grey;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.listContainer {
+  margin-top: 10px;
+  height: auto;
+  width: 98%;
+  /* border: 5px solid brown; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filters {
+  height: 50px;
+  width: 98%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filterButton {
+  width: 200px;
+  height: 100%;
+}
+.filterButton button {
+  height: 99%;
+  width: 100px;
+  background-color: transparent;
+  font-size: large;
+  color: darkslategrey;
+  border: none;
+  font-family: "Recursive", sans-serif;
+}
+.filterButton button:focus {
+  border-bottom: 3px solid grey;
+  color: green;
+}
+.login {
+  margin-top: 0%;
+  position: absolute;
+  height: 90vh;
+  width: 98%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  float: right;
+  flex-direction: column;
+  z-index: 5;
+}
