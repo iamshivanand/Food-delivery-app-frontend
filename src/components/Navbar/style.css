@@ -1,0 +1,90 @@
+.NavigationBar {
+  height: 60px;
+  width: 98vw;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  align-items: center;
+  justify-content: space-around;
+}
+.logoContainer {
+  margin-left: 10px;
+  /* border: 1px dotted orange; */
+  /* height: 99%;
+  align-items: center; */
+}
+.logoContainer img {
+  height: 50px;
+  width: 60px;
+}
+
+.SearchBar {
+  height: 95%;
+  width: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputDiv {
+  height: 90%;
+  width: 90%;
+}
+.SearchButtonDiv {
+  height: 90%;
+  width: 9%;
+  border-left: 1px solid lightgrey;
+}
+.inputDiv input {
+  height: 90%;
+  width: 99%;
+  border: none;
+  font-size: 20px;
+}
+.SearchButtonDiv button {
+  margin: 0%;
+  height: 100%;
+  width: 90%;
+  background-color: white;
+  border: none;
+}
+/* .SearchBar input {
+  height: 80%;
+  width: 80%;
+  min-width: 400px;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+input:focus {
+  outline: none;
+}
+.SearchBar button {
+  margin: 0%;
+  height: 100%;
+  width: 10%;
+  border: none;
+  border-left: 1px solid grey;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+} */
+
+.otherIcons {
+  width: 20%;
+  /* border: 1px dotted orange; */
+  margin-right: 10px;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.profileButton {
+  display: flex;
+}
+.cartButton {
+  display: flex;
+}

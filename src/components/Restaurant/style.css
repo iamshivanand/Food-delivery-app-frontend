@@ -1,7 +1,7 @@
 .restaurantContainer {
   border: 1px solid black;
   height: auto;
-  width: 96vw;
+  width: 96%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
