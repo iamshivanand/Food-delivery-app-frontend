@@ -56,6 +56,7 @@
   color: beige;
   border: none;
   font-family: "Recursive", sans-serif;
+  cursor: pointer;
 }
 .searchContainer {
   margin-top: 20px;
@@ -140,11 +141,11 @@ input:focus {
 .login {
   margin-top: 0%;
   position: absolute;
-  height: 90vh;
+  height: window;
   width: 98%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  float: right;
   flex-direction: column;
   z-index: 5;
 }
+

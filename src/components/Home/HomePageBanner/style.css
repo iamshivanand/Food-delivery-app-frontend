@@ -1,0 +1,13 @@
+.displayBanner {
+  /* border: 1px solid white; */
+  min-height: 250x;
+  min-width: 350px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.displayBanner img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}

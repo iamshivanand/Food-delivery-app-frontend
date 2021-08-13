@@ -9,8 +9,25 @@
 .homePageBanner {
   margin-top: 20px;
   height: 300px;
-  width: 100vw;
+  width: 100%;
   background-color: rgb(6, 6, 71);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  z-index: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.homePageBanner::-webkit-scrollbar {
+  display: none;
+}
+.bannerWrapper {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .listContainer {
   margin-top: 10px;

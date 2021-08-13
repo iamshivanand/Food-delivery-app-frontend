@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import banner6 from "../../images/banner6.jpg";
+import { useSelector } from "react-redux";
 
 //material ui
 import SearchIcon from "@material-ui/icons/Search";
@@ -15,11 +16,17 @@ import Login from "./Login/Login";
 const LandingPage = () => {
   const [isSignIn, setIsSignIn] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
+  const AllRestaurants = useSelector((state) => state.restaurant.restaurants);
+  // console.log("AllRestaurants : ", AllRestaurants);
   const handleLogin = () => {
     setIsSignIn(true);
   };
   const handleSignUp = () => {
     setIsSignUp(true);
+  };
+  const closeLoginOrSignUp = () => {
+    setIsSignIn(false);
+    setIsSignUp(false);
   };
   return (
     <div className="landingPage">
@@ -28,7 +35,13 @@ const LandingPage = () => {
       </div>
       {isSignIn || isSignUp ? (
         <div className="login">
-          <Login />
+          <Login
+            closeLoginOrSignUp={closeLoginOrSignUp}
+            isSignIn={isSignIn}
+            isSignUp={isSignUp}
+            setIsSignIn={setIsSignIn}
+            setIsSignUp={setIsSignUp}
+          />
         </div>
       ) : null}
 
@@ -76,7 +89,7 @@ const LandingPage = () => {
       <div className="listContainer">
         <div className="filters">
           <div className="restaurantCount">
-            <h2>24 restaurants</h2>
+            <h2>{AllRestaurants.length} restaurants</h2>
           </div>
           <div className="filterButton">
             <button>Rating</button>
@@ -84,7 +97,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <Restaurant />
+        <Restaurant restaurants={AllRestaurants} />
       </div>
     </div>
   );

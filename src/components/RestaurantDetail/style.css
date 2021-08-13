@@ -1,0 +1,260 @@
+.RestaurantDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.RestaurantHeader {
+  margin-top: 20px;
+  height: auto;
+  /* min-height: 300px; */
+  width: 100%;
+  background-color: rgb(6, 6, 71);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  flex-wrap: wrap;
+}
+.RestaurantDescription {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* border: 1px solid white; */
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.RestaurantImage {
+  margin: 10px;
+  /* border: 1px dotted white; */
+  min-height: 200px;
+  min-width: 200px;
+  height: 80%;
+  width: 200px;
+}
+.RestaurantImage img {
+  height: 100%;
+  width: 100%;
+}
+.aboutRestaurant {
+  padding-left: 10px;
+  margin: 10px;
+  /* border: 1px solid red; */
+  height: 80%;
+  width: 60%;
+  min-height: 200px;
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.RatingTimeCostWrapper {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.RestaurantRating {
+  height: 60px;
+  width: 80px;
+  /* border: 1px solid whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ratingValue {
+  display: flex;
+}
+.DeliveryTime {
+  height: 60px;
+  width: 80px;
+  /* border: 1px solid whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.cost {
+  height: 60px;
+  width: 80px;
+  /* border: 1px solid whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu {
+  height: auto;
+  width: 70%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgrey;
+}
+.menuAndSmallCart {
+  height: auto;
+  width: 90%;
+  border: 1px solid seagreen;
+  display: flex;
+
+  /* justify-content: center; */
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.normal {
+  padding: 5px;
+  height: 450px;
+  min-height: 300px;
+  width: 29%;
+  /* position: relative;
+  top: 45%;
+  left: 68%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.normal::-webkit-scrollbar {
+  display: none;
+}
+.stick {
+  padding: 5px;
+  height: 550px;
+  min-height: 300px;
+  width: 29%;
+  position: fixed;
+  top: 5%;
+  left: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.stick::-webkit-scrollbar {
+  display: none;
+}
+.smallCart1 {
+  padding: 5px;
+  height: auto;
+  min-height: 300px;
+  width: 29%;
+  position: sticky;
+  top: 5%;
+  left: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.FoodType {
+  height: auto;
+  width: 70%;
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.items {
+  margin-bottom: 10px;
+  height: auto;
+  width: 80%;
+  /* border: 1px solid blue; */
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+}
+.FoodTypeHeader {
+  display: flex;
+}
+.itemLeft {
+  /* border: 1px dotted black; */
+  height: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.itemRight {
+  /* border: 1px dotted black; */
+  height: auto;
+  width: 19%;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+.addItem {
+  height: 30px;
+  width: 90px;
+  background-color: white;
+  border: 1px solid black;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+}
+.CartItem {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+.CartItem span {
+  width: 50%;
+}
+.cartHeader {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-bottom: 2px solid grey;
+}
+.CheckOutButton {
+  height: 40px;
+  width: 90%;
+}
+.CheckOutButton button {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: green;
+  font-size: 30px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.customPizzaContainer {
+  height: 100vh;
+  width: 98vw;
+  border: 1px solid black;
+  position: fixed;
+  z-index: 50;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

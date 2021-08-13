@@ -1,5 +1,5 @@
 .restaurantContainer {
-  border: 1px solid black;
+  /* border: 1px solid orange; */
   height: auto;
   width: 96%;
   display: flex;
@@ -8,7 +8,7 @@
 }
 .wrapperDiv {
   margin: 20px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   min-height: 300px;
   min-width: 300px;
   max-height: 450px;
@@ -16,19 +16,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  object-fit: contain;
 }
 .restaurant {
-  height: 80%;
-  width: 80%;
-  border: 1px dotted green;
+  height: 90%;
+  width: 90%;
+  /* border: 1px dotted green; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 .restaurantimageContainer {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   height: 50%;
   width: 99%;
+}
+.restaurantimageContainer img {
+  height: 100%;
+  width: 100%;
 }
 .detailsContainer {
   height: 49%;
   width: 99%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
+}
+.restaurantLink {
+  text-decoration: none;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
 }

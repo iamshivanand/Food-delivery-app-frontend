@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import "./style.css";
 
-const Banner = () => {
-    return (
-        <div className="displayBanner">
-            
-        </div>
-    )
-}
+//images
 
-export default Banner
+const Banner = ({ image }) => {
+  return (
+    <div className="displayBanner">
+      <img src={image} alt="banner1" />
+    </div>
+  );
+};
+
+export default Banner;

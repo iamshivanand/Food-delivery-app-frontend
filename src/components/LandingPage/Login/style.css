@@ -1,12 +1,32 @@
 .signIn {
+  color: black;
+  /* margin-top: 20px; */
+  height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(12, 184, 172);
   border-radius: 20px;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 1);
 }
+/* .signIn div {
+  width: 98%;
+} */
+.wrapper {
+  /* border: 1px solid white; */
+  height: auto;
+  width: auto;
+  color: white;
+  margin: auto;
 
+  /* float: right; */
+}
 .signUp {
+  color: black;
+  height: auto;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,10 +40,17 @@
   /* border: 1px solid white; */
 /* } */
 .form {
-  margin: 10px;
-  height: 80vh;
+  /* margin: 10px; */
+  height: 87vh;
+  width: 98vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+.closeButton {
+  /* border: 1px solid white; */
+  margin-left: 410px;
+  cursor: pointer;
 }

@@ -3,14 +3,37 @@ import "./style.css";
 import SearchIcon from "@material-ui/icons/Search";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+
+import { Logout } from "../../actions/auth.js";
+import { useDispatch } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
 //images
 import logo from "../../images/logo.png";
+import { useSelector } from "react-redux";
+
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  // const location = useLocation();
+  // const [user, setUser] = React.useState(
+  //   JSON.parse(localStorage.getItem("profile"))
+  // );
+  const user = JSON.parse(localStorage.getItem("profile"));
+  // console.log("user", user);
+  // console.log(user);
+  const logout = () => {
+    dispatch(Logout());
+    //here display the notification of logout
+    history.push("/");
+  };
   return (
     <div className="NavigationBar">
-      <div className="logoContainer">
-        <img src={logo} alt="logo" />
-      </div>
+      <Link to="/home">
+        <div className="logoContainer">
+          <img src={logo} alt="logo" />
+        </div>
+      </Link>
       <div className="SearchBar">
         <div className="inputDiv">
           <input />
@@ -22,18 +45,20 @@ const Navbar = () => {
         </div>
       </div>
       <div className="otherIcons">
-        <div className="profileButton">
+        <div className="profileButton" onClick={logout}>
           <PermIdentityIcon />
           <div className="ProfileName">
-            <span>Shiv</span>&nbsp;&nbsp;
+            &nbsp;&nbsp;
+            <span>{user?.result.name}</span>
           </div>
         </div>
-        <div className="cartButton">
+
+        <Link to="/cart" className="cartButton">
           <div className="carCount">
-            <span>0</span>&nbsp;&nbsp;
+            <span>{cartItems.lenght}</span>&nbsp;&nbsp;
           </div>
           <ShoppingCartIcon />
-        </div>
+        </Link>
       </div>
     </div>
   );
