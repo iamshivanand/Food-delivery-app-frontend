@@ -119,7 +119,7 @@ function Login({
                   <CssTextField
                     label="Password"
                     name="password"
-                    // type="password"
+                    type="password"
                     required
                     fullWidth
                     variant="outlined"
@@ -192,7 +192,7 @@ function Login({
                   <CssTextField
                     label="Password"
                     name="password"
-                    // type="password"
+                    type="password"
                     required
                     fullWidth
                     variant="outlined"
@@ -206,7 +206,7 @@ function Login({
                   <CssTextField
                     label="Confirm Password"
                     name="confirmPassword"
-                    // type="password"
+                    type="password"
                     required
                     fullWidth
                     variant="outlined"
