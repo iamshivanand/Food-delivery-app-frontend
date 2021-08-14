@@ -81,7 +81,6 @@ const RestaurantDetail = () => {
             pizza={pizza}
             setPizza={setPizza}
             setShowCustomPizza={setShowCustomPizza}
-           
             cartItems={cartItems}
             setCartItems={setCartItems}
           />
@@ -215,7 +214,11 @@ const RestaurantDetail = () => {
             </div>
           ))}
           {!!cartItems.length && (
-            <Link to="/cart" className="CheckOutButton">
+            <Link
+              to="/cart"
+              className="CheckOutButton"
+              style={{ textDecoration: "none" }}
+            >
               <button onClick={handleCheckOut}>CheckOut</button>
             </Link>
           )}

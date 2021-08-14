@@ -10,8 +10,34 @@ import "./style.css";
 import Typewriter from "typewriter-effect";
 
 //components
-import Restaurant from "../Restaurant/Restaurant";
+
 import Login from "./Login/Login";
+
+//framer-motion
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { delay: 0, duration: 1.2 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
+const headingVariants = {
+  hidden: {
+    y: "-100vw",
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", delay: 0, duration: 1 },
+  },
+};
 
 const LandingPage = () => {
   const [isSignIn, setIsSignIn] = useState(false);
@@ -29,7 +55,13 @@ const LandingPage = () => {
     setIsSignUp(false);
   };
   return (
-    <div className="landingPage">
+    <motion.div
+      className="landingPage"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="imageContainer">
         <img src={banner6} alt="foodImage" />
       </div>
@@ -56,9 +88,14 @@ const LandingPage = () => {
             </button>
           </div>
         </div>
-        <div className="searchContainer">
+        <motion.div
+          className="searchContainer"
+          variants={headingVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <h1>INDIAN SWAD</h1>
-        </div>
+        </motion.div>
         <div className="tagLine">
           <h2>
             <Typewriter
@@ -86,7 +123,7 @@ const LandingPage = () => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -12,8 +12,34 @@ import { CssTextField, useStyles } from "./style";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signin, signup } from "../../../actions/auth";
+//famer motion
+import { motion } from "framer-motion";
 
 const initialState = { name: "", email: "", password: "", confirmPassword: "" };
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { delay: 0.2, duration: 1 },
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" },
+  },
+};
+const formVariants = {
+  hidden: {
+    y: "-100vw",
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", delay: 0, duration: 1 },
+  },
+};
+
 toast.configure();
 
 function Login({
@@ -49,15 +75,32 @@ function Login({
   };
 
   return (
-    <div className="form">
+    <motion.div
+      className="form"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="wrapper">
-        <div className="closeButton" onClick={closeLoginOrSignUp}>
+        <motion.div
+          className="closeButton"
+          onClick={closeLoginOrSignUp}
+          variants={formVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <HighlightOffIcon />
-        </div>
+        </motion.div>
         <form onSubmit={handleSubmit}>
           {isSignIn && (
             <Container component="main" maxWidth="xs">
-              <div className="signIn">
+              <motion.div
+                className="signIn"
+                variants={formVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <h2>Sign In</h2>
                 <div>
                   <CssTextField
@@ -107,12 +150,17 @@ function Login({
                     </span>
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </Container>
           )}
           {isSignUp && (
             <Container component="main" maxWidth="xs">
-              <div className="signUp">
+              <motion.div
+                className="signUp"
+                variants={formVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <h2>Sign Up</h2>
                 <div>
                   <CssTextField
@@ -189,12 +237,12 @@ function Login({
                     </span>
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </Container>
           )}
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

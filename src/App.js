@@ -13,6 +13,8 @@ import RestaurantDetail from "./components/RestaurantDetail/RestaurantDetail";
 import Cart from "./components/cart/cart";
 import ScrollToTop from "./ScrollToTop";
 
+import { AnimatePresence } from "framer-motion";
+
 function App() {
   const dispatch = useDispatch();
   // const history = useHistory();
@@ -37,29 +39,31 @@ function App() {
   return (
     <div className="App">
       <ScrollToTop />
-      <Switch>
-        <Route exact path="/">
-          {loggedIn ? (
-            <Home handleRestaurant={handleRestaurant} />
-          ) : (
-            <LandingPage />
-          )}
-        </Route>
-        <Route exact path="/home">
-          {loggedIn ? (
-            <Home handleRestaurant={handleRestaurant} />
-          ) : (
-            <LandingPage />
-          )}
-        </Route>
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          <Route exact path="/">
+            {loggedIn ? (
+              <Home handleRestaurant={handleRestaurant} />
+            ) : (
+              <LandingPage />
+            )}
+          </Route>
+          <Route exact path="/home">
+            {loggedIn ? (
+              <Home handleRestaurant={handleRestaurant} />
+            ) : (
+              <LandingPage />
+            )}
+          </Route>
 
-        <Route exact path={`/restaurant/:id`}>
-          {loggedIn ? <RestaurantDetail /> : <LandingPage />}
-        </Route>
-        <Route exact path="/cart">
-          {loggedIn ? <Cart /> : <LandingPage />}
-        </Route>
-      </Switch>
+          <Route exact path={`/restaurant/:id`}>
+            {loggedIn ? <RestaurantDetail /> : <LandingPage />}
+          </Route>
+          <Route exact path="/cart">
+            {loggedIn ? <Cart /> : <LandingPage />}
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }

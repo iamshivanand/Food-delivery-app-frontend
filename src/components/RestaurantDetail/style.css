@@ -234,14 +234,17 @@
   border-bottom: 2px solid grey;
 }
 .CheckOutButton {
-  height: 40px;
+  height: 50px;
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .CheckOutButton button {
   height: 100%;
   width: 100%;
-  background-color: white;
-  color: green;
+  background-color: green;
+  color: white;
   font-size: 30px;
   cursor: pointer;
   border: 1px solid black;

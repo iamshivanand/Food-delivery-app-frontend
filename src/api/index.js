@@ -1,5 +1,7 @@
 import axios from "axios";
-const API = axios.create({ baseURL: "http://localhost:8000" });
+const API = axios.create({
+  baseURL: "https://food-delivery-jackfruit.herokuapp.com/",
+});
 
 export const signIn = (FormData) => API.post("/user/signin", FormData);
 export const signUp = (FormData) => API.post("/user/signup", FormData);
