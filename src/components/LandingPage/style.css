@@ -11,8 +11,8 @@
 }
 .imageContainer {
   /* border: 5px solid grey; */
-  height: 90vh;
-  width: 98%;
+  height: 98vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@
 .header {
   margin-top: 0%;
   position: absolute;
-  height: 90vh;
+  height: 98vh;
   width: 98%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -148,4 +148,3 @@ input:focus {
   flex-direction: column;
   z-index: 5;
 }
-

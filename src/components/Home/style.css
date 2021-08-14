@@ -9,25 +9,30 @@
 .homePageBanner {
   margin-top: 20px;
   height: 300px;
-  width: 100%;
+  width: 93%;
   background-color: rgb(6, 6, 71);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
+  overflow: hidden;
   z-index: 1;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  object-fit: contain;
 }
 .homePageBanner::-webkit-scrollbar {
   display: none;
 }
 .bannerWrapper {
   height: 100%;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.carouselImages {
+  height: 100%;
+  width: 100%;
 }
 .listContainer {
   margin-top: 10px;

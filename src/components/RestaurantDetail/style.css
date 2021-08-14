@@ -103,7 +103,7 @@
 .menuAndSmallCart {
   height: auto;
   width: 90%;
-  border: 1px solid seagreen;
+  /* border: 1px solid seagreen; */
   display: flex;
 
   /* justify-content: center; */

@@ -11,6 +11,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import Home from "./components/Home/Home";
 import RestaurantDetail from "./components/RestaurantDetail/RestaurantDetail";
 import Cart from "./components/cart/cart";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,7 +24,7 @@ function App() {
   // const [restaurant, setRestaurant] = useState("");
   useEffect(() => {
     dispatch(getRestaurants());
-  }, [dispatch, loggedIn]);
+  }, [dispatch, loggedIn, hello]);
 
   const handleRestaurant = (e) => {
     localStorage.setItem("restaurant", e.currentTarget.dataset.info);
@@ -35,7 +36,7 @@ function App() {
   // console.log("Auth", !!loggedIn);
   return (
     <div className="App">
-      {/* {loggedIn && history.push("/home")} */}
+      <ScrollToTop />
       <Switch>
         <Route exact path="/">
           {loggedIn ? (

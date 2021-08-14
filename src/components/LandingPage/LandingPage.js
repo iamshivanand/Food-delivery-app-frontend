@@ -86,19 +86,6 @@ const LandingPage = () => {
           </button>
         </div>
       </div>
-      <div className="listContainer">
-        <div className="filters">
-          <div className="restaurantCount">
-            <h2>{AllRestaurants.length} restaurants</h2>
-          </div>
-          <div className="filterButton">
-            <button>Rating</button>
-            <button>Price</button>
-          </div>
-        </div>
-
-        <Restaurant restaurants={AllRestaurants} />
-      </div>
     </div>
   );
 };

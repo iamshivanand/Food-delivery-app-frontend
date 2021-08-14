@@ -30,14 +30,13 @@ export const signin = (formData, history) => async (dispatch) => {
     //log in the user
     const { data } = await api.signIn(formData);
     const { message } = data;
-    console.log("data", data.result);
+
     // console.log(message);
 
     if (data.result) {
       // console.log("history", history);
       const action = { type: AUTH, data };
       dispatch(action);
-      console.log("history", history);
 
       history.push("/home");
     }
@@ -113,7 +112,7 @@ export const fetchCartItems = () => async (dispatch) => {
   var id = profile.result._id;
   try {
     const { data } = await api.getCartItems({ id });
-    
+
     const action = {
       type: ADD_TO_CART,
       payload: data.result.cart,
