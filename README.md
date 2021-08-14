@@ -16,11 +16,11 @@ You will also see any lint errors in the console.
 
 
 ### Libraries used
-1.Axios
+### Axios
 axios is used for api integration
-2.framer-motion
+### framer-motion
 This library is used to apply animation on the website
-3.Redux
+### Redux
 Redux is used in this web application for state management.
 
 ### Backend for this website is deployed on heroku 
